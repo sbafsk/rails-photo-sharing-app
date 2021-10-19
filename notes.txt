@@ -21,3 +21,19 @@ database table, generate the uploader, mount the uploader, and add
 image to our whitelisted parameters.
 - To display an image, we create an image tag and pass in a call to
 post.image.url
+
+111.
+- The example code for how to create a version appears as a comment
+in the uploader class definition.
+- To get those again later, we pass the version symbol to the
+image.url method.
+- When we define different image sizes in our uploader class,
+those get created when an image is uploaded, but we can recreate
+them for images that already exist, by running `Post.find_each 
+{|post| post.image.recreate_versions!}` in the rails console.
+
+112.
+- This was pretty similar to our authorization for the To Do list app.
+- To avoid repeating the confirm_login method, I extracted it to a 
+module. Since our controllers inherit from ApplicationController, 
+I could have instead added the method there.

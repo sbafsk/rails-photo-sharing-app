@@ -3,7 +3,7 @@
 </p>
 <p>
   <em><%= @post.caption %><em> - 
-  <b><%= link_to @post.user %></b>
+  <b><%= link_to @post.user, @post.user %></b>
 </p>
 
 <%= link_to 'Edit', edit_post_path(@post) %> |

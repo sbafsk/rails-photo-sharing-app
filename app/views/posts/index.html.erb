@@ -5,10 +5,10 @@
     <% @posts.each do |post| %>
       <tr>        
         
-        <p><%= link_to image_tag(post.image.url), post %></p>
+        <p><%= link_to image_tag(post.image.url :preview), post %></p>
         <p>
           <em><%= post.caption %><em> - 
-          <b><%= link_to post.user %></b>
+          <b><%= link_to post.user, post.user %></b>
         </p>
         <hr>
       </tr>
