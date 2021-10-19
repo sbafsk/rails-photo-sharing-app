@@ -1,0 +1,15 @@
+108.
+- Nothing new there. Just like before, I used the scaffod generator to
+create the user resources.
+- Session Controller manages login by storing the user's id
+(not the user object).
+- The ApplicationHelper makes methods available to the views
+(automatically), but to get those methods in the Controller
+we have to include the module there.
+
+109.
+- If we're setting up a new model that has a "belongs to" relationship
+to one that already exists, we can say `user:references` in the
+generate command.
+- Defining the #to_s method for our user saves typing
+`.username` all the time.
