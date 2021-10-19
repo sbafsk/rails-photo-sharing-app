@@ -13,3 +13,11 @@ to one that already exists, we can say `user:references` in the
 generate command.
 - Defining the #to_s method for our user saves typing
 `.username` all the time.
+
+110.
+- Remember to restart your server after adding a gem to your project.
+- To add an image attribute to posts, we add the column to the
+database table, generate the uploader, mount the uploader, and add
+image to our whitelisted parameters.
+- To display an image, we create an image tag and pass in a call to
+post.image.url

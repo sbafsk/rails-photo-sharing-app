@@ -3,11 +3,11 @@ class SessionsController < ApplicationController
   end
 
   def create
-    user = User.find_by_username(params[:username])
-    if user && user.authenticate(params[:password])
-      session[:user_id] = user.id
+    @user = User.find_by_username(params[:username])
+    if @user && @user.authenticate(params[:password])
+      session[:user_id] = @user.id
       # flash[:notice] = "Login Successful" # shows on next page
-      redirect_to :users, notice: "Login Successful." 
+      redirect_to :posts, notice: "Login Successful." 
     else
       flash[:alert] = "Login Failed" 
       render 'new'
