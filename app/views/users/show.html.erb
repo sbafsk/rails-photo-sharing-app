@@ -3,17 +3,12 @@
   
 </p>
 
-<ul>
+<div class="columns is-multiline is-gapless">
   <% @user.posts.each do |post| %>
-    <p>
-      <%= link_to image_tag(post.image.url :preview), post %>
-    </p>
-    <p>
-      <em><%= post.caption %><em> - 
-      <b><%= link_to post.user, post.user %></b>
-    </p>
+    <div class="column is-one-quarter">  
+      <div class="image is-4by3">
+        <%= link_to image_tag(post.image.url), post %>        
+      </div>
+    </div>
   <% end %>
-</ul>
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', posts_path %>
+</div>

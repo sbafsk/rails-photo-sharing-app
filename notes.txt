@@ -37,3 +37,11 @@ them for images that already exist, by running `Post.find_each
 - To avoid repeating the confirm_login method, I extracted it to a 
 module. Since our controllers inherit from ApplicationController, 
 I could have instead added the method there.
+
+113.
+- CSS file go in `app/assets/stylesheets`, javascript would 
+go in `app/assets/javascript`
+- Tell Rails to precompile Bulma stylesheet in 
+`config/initializers/assets.rb`
+- Tag html elements with Bulma classes
+- modifiers which start with 'is': e.g 'is-4by3', 'is-gapless'
